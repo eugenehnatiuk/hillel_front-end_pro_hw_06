@@ -14,7 +14,7 @@ const numbers = [
   76, -4, 12, -35, 4, 47,
 ];
 
-console.log(numbers.reduce((prev, curr) => curr > 0 ? prev + curr : prev, 0));
+
 
 let countPositives = 0;
 let sumOfPositives = 0;
@@ -68,6 +68,7 @@ const result = alert(`
 
 console.log(countPositives);
 console.log(sumOfPositives);
+console.log(numbers.reduce((prev, curr) => (curr > 0 ? prev + curr : prev), 0));
 console.log(countEvenPositives);
 console.log(sumOfEvenPositives);
 console.log(countOddPositives);
