@@ -14,8 +14,6 @@ const numbers = [
   76, -4, 12, -35, 4, 47,
 ];
 
-
-
 let countPositives = 0;
 let sumOfPositives = 0;
 let maxElement = numbers[0];
@@ -42,14 +40,13 @@ for (let i = 0; i < numbers.length; i++) {
       countOddPositives++;
       sumOfOddPositives += currentNumber;
     }
-  } else {
+  } else if (currentNumber < 0) {
     countNegatives++;
   }
 
   if (maxElement < currentNumber) {
     maxElement = currentNumber;
-    maxElementIndex = numbers.indexOf(maxElement);
-    // maxElementIndex = i;
+    maxElementIndex = i;
   }
 }
 
@@ -68,7 +65,7 @@ const result = alert(`
 
 console.log(countPositives);
 console.log(sumOfPositives);
-console.log(numbers.reduce((prev, curr) => (curr > 0 ? prev + curr : prev), 0));
+// console.log(numbers.reduce((prev, curr) => (curr > 0 ? prev + curr : prev), 0));
 console.log(countEvenPositives);
 console.log(sumOfEvenPositives);
 console.log(countOddPositives);
