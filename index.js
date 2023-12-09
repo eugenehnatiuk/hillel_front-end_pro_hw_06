@@ -26,7 +26,7 @@ let sumOfEvenPositives = 0;
 let productOfPositives = 1;
 
 for (let i = 0; i < numbers.length; i++) {
-  let currentNumber = numbers[i];
+  const currentNumber = numbers[i];
 
   if (currentNumber > 0) {
     countPositives++;
@@ -74,3 +74,5 @@ console.log(productOfPositives);
 console.log(countNegatives);
 console.log(maxElement);
 console.log(maxElementIndex);
+
+
